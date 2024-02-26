@@ -1,0 +1,72 @@
+/* Apply a basic styling to the form */
+.delivery-detiles form {
+  max-width: 400px;
+  margin: auto;
+}
+
+/* Style form labels and inputs */
+.delivery-detiles label {
+  display: block;
+  margin-bottom: 8px;
+}
+
+.delivery-detiles input {
+  display: flex;
+  width: 280px;
+  height: 5vh;
+  background: #ffffff;
+  background-image: linear-gradient(
+    -180deg,
+    rgba(255, 255, 255, 0.5) 0%,
+    rgba(0, 0, 0, 0.5) 100%
+  );
+  background-blend-mode: lighten;
+  border: none;
+  border-radius: 5px;
+}
+
+/* Style the submit button */
+.delivery-detiles button {
+  margin-top: 1.5rem;
+  width: 150px;
+  height: 4vh;
+  border-radius: 10px;
+  border: none;
+  background-image: linear-gradient(to top, #48c6ef 0%, #6f86d6 100%);
+  cursor: pointer;
+}
+
+.delivery-detiles button:hover {
+  background-color: #0056b3;
+}
+.delivery-detiles {
+  padding: 20px 20px;
+  border-radius: 10px;
+  background-image: linear-gradient(
+    to top,
+    #c4c5c7b1 0%,
+    #dcdddfaa 52%,
+    #ebebebb0 100%
+  );
+  backdrop-filter: blur(20px);
+}
+.delivery-detiles h2 {
+  font-family: monospace;
+}
+@media only screen and (max-width: 1024px) {
+  .delivery-detiles {
+    width: 350px;
+  }
+  .delivery-detiles input {
+    width: 350px;
+    height: 3vh;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .delivery-detiles form {
+    width: 300px;
+  }
+  .delivery-detiles input {
+    width: 200px;
+  }
+}

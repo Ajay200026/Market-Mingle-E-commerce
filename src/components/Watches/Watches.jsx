@@ -1,0 +1,561 @@
+import React from "react";
+
+const products = [
+  {
+    id: 1,
+    bestSeller: "+15",
+    brand: "Apple",
+    productName: "Apple Watch Series 7",
+    rating: "✩✩✩✩✩  50,000",
+    reviews: "Review 10,000",
+    mrp: "19999 ",
+    titel: "M.R.P",
+    price: "17999",
+    discount: "(10% off)",
+    prime: "✓ Prime",
+    delivery: "FREE Delivery by Amazon",
+    image: "./src/assets/watch/wa1.jpg",
+    quantity: 1,
+  },
+  {
+    id: 2,
+    bestSeller: "+12",
+    brand: "Rolex",
+    productName: "Submariner Date",
+    rating: "✩✩✩✩☆  25,345",
+    reviews: "Review 789",
+    mrp: "19999 ",
+    titel: "M.R.P",
+    price: "18999",
+    discount: "(5% off)",
+    prime: "✓ Prime",
+    delivery: "FREE Delivery by Amazon",
+    image: "./src/assets/watch/wa2.jpg",
+    quantity: 1,
+  },
+  {
+    id: 3,
+    bestSeller: "+10",
+    brand: "Casio",
+    productName: "G-Shock GA-2100",
+    rating: "✩✩✩✩☆  12,876",
+    reviews: "Review 432",
+    mrp: "9999 ",
+    titel: "M.R.P",
+    price: "8999",
+    discount: "(10% off)",
+    prime: "✓ Prime",
+    delivery: "FREE Delivery by Amazon",
+    image: "./src/assets/watch/wa3.jpg",
+    quantity: 1,
+  },
+  {
+    id: 4,
+    bestSeller: "+14",
+    brand: "Tag Heuer",
+    productName: "Carrera Calibre 16",
+    rating: "✩✩✩✩☆  18,543",
+    reviews: "Review 876",
+    mrp: "39999 ",
+    titel: "M.R.P",
+    price: "35999",
+    discount: "(10% off)",
+    prime: "✓ Prime",
+    delivery: "FREE Delivery by Amazon",
+    image: "./src/assets/watch/wa4.jpg",
+    quantity: 1,
+  },
+  {
+    id: 5,
+    bestSeller: "+8",
+    brand: "Seiko",
+    productName: "Presage Cocktail Time",
+    rating: "✩✩✩✩☆  15,678",
+    reviews: "Review 432",
+    mrp: "19999 ",
+    titel: "M.R.P",
+    price: "17999",
+    discount: "(10% off)",
+    prime: "✓ Prime",
+    delivery: "FREE Delivery by Amazon",
+    image: "./src/assets/watch/wa5.jpg",
+    quantity: 1,
+  },
+  {
+    id: 6,
+    bestSeller: "+11",
+    brand: "Omega",
+    productName: "Seamaster Diver 300M",
+    rating: "✩✩✩✩✩  32,567",
+    reviews: "Review 987",
+    mrp: "49999 ",
+    titel: "M.R.P",
+    price: "45999",
+    discount: "(8% off)",
+    prime: "✓ Prime",
+    delivery: "FREE Delivery by Amazon",
+    image: "./src/assets/watch/wa6.jpg",
+    quantity: 1,
+  },
+  {
+    id: 7,
+    bestSeller: "+9",
+    brand: "Fossil",
+    productName: "Gen 6 Touchscreen Smartwatch",
+    rating: "✩✩✩✩☆  21,876",
+    reviews: "Review 654",
+    mrp: "24999 ",
+    titel: "M.R.P",
+    price: "22999",
+    discount: "(8% off)",
+    prime: "✓ Prime",
+    delivery: "FREE Delivery by Amazon",
+    image: "./src/assets/watch/wa7.jpg",
+    quantity: 1,
+  },
+  {
+    id: 8,
+    bestSeller: "+13",
+    brand: "Citizen",
+    productName: "Eco-Drive Chandler Field Watch",
+    rating: "✩✩✩✩☆  26,432",
+    reviews: "Review 876",
+    mrp: "29999 ",
+    titel: "M.R.P",
+    price: "27999",
+    discount: "(7% off)",
+    prime: "✓ Prime",
+    delivery: "FREE Delivery by Amazon",
+    image: "./src/assets/watch/wa8.jpg",
+    quantity: 1,
+  },
+  {
+    id: 9,
+    bestSeller: "+16",
+    brand: "Timex",
+    productName: "Weekender Chronograph",
+    rating: "✩✩✩✩☆  30,876",
+    reviews: "Review 876",
+    mrp: "8999 ",
+    titel: "M.R.P",
+    price: "7999",
+    discount: "(11% off)",
+    prime: "✓ Prime",
+    delivery: "FREE Delivery by Amazon",
+    image: "./src/assets/watch/wa9.jpg",
+    quantity: 1,
+  },
+  {
+    id: 10,
+    bestSeller: "+14",
+    brand: "Panerai",
+    productName: "Luminor Marina 1950 3 Days",
+    rating: "✩✩✩✩☆  25,543",
+    reviews: "Review 789",
+    mrp: "44999 ",
+    titel: "M.R.P",
+    price: "41999",
+    discount: "(7% off)",
+    prime: "✓ Prime",
+    delivery: "FREE Delivery by Amazon",
+    image: "./src/assets/watch/wa10.jpg",
+    quantity: 1,
+  },
+  {
+    id: 11,
+    bestSeller: "+11",
+    brand: "Hamilton",
+    productName: "Khaki Field Mechanical",
+    rating: "✩✩✩✩☆  18,567",
+    reviews: "Review 432",
+    mrp: "19999 ",
+    titel: "M.R.P",
+    price: "17999",
+    discount: "(10% off)",
+    prime: "✓ Prime",
+    delivery: "FREE Delivery by Amazon",
+    image: "./src/assets/watch/wa11.jpg",
+    quantity: 1,
+  },
+  {
+    id: 12,
+    bestSeller: "+9",
+    brand: "Tissot",
+    productName: "Le Locle Automatic",
+    rating: "✩✩✩✩☆  15,876",
+    reviews: "Review 543",
+    mrp: "19999 ",
+    titel: "M.R.P",
+    price: "18999",
+    discount: "(5% off)",
+    prime: "✓ Prime",
+    delivery: "FREE Delivery by Amazon",
+    image: "./src/assets/watch/wa12.jpg",
+    quantity: 1,
+  },
+  {
+    id: 13,
+    bestSeller: "+14",
+    brand: "Bulova",
+    productName: "Precisionist Chronograph",
+    rating: "✩✩✩✩☆  28,765",
+    reviews: "Review 987",
+    mrp: "39999 ",
+    titel: "M.R.P",
+    price: "35999",
+    discount: "(10% off)",
+    prime: "✓ Prime",
+    delivery: "FREE Delivery by Amazon",
+    image: "./src/assets/watch/wa13.jpg",
+    quantity: 1,
+  },
+  {
+    id: 14,
+    bestSeller: "+12",
+    brand: "Longines",
+    productName: "Master Collection",
+    rating: "✩✩✩✩☆  22,543",
+    reviews: "Review 876",
+    mrp: "29999 ",
+    titel: "M.R.P",
+    price: "27999",
+    discount: "(7% off)",
+    prime: "✓ Prime",
+    delivery: "FREE Delivery by Amazon",
+    image: "./src/assets/watch/wa14.jpg",
+    quantity: 1,
+  },
+  {
+    id: 15,
+    bestSeller: "+10",
+    brand: "Oris",
+    productName: "Aquis Date",
+    rating: "✩✩✩✩☆  16,876",
+    reviews: "Review 432",
+    mrp: "19999 ",
+    titel: "M.R.P",
+    price: "17999",
+    discount: "(10% off)",
+    prime: "✓ Prime",
+    delivery: "FREE Delivery by Amazon",
+    image: "./src/assets/watch/wa15.jpg",
+    quantity: 1,
+  },
+  {
+    id: 16,
+    bestSeller: "+15",
+    brand: "Citizen",
+    productName: "Promaster Diver",
+    rating: "✩✩✩✩☆  26,567",
+    reviews: "Review 765",
+    mrp: "24999 ",
+    titel: "M.R.P",
+    price: "22999",
+    discount: "(8% off)",
+    prime: "✓ Prime",
+    delivery: "FREE Delivery by Amazon",
+    image: "./src/assets/watch/wa16.jpg",
+    quantity: 1,
+  },
+  {
+    id: 17,
+    bestSeller: "+13",
+    brand: "G-Shock",
+    productName: "MT-G Metal Twisted G-SHOCK",
+    rating: "✩✩✩✩☆  21,876",
+    reviews: "Review 654",
+    mrp: "49999 ",
+    titel: "M.R.P",
+    price: "45999",
+    discount: "(8% off)",
+    prime: "✓ Prime",
+    delivery: "FREE Delivery by Amazon",
+    image: "./src/assets/watch/wa17.jpg",
+    quantity: 1,
+  },
+  {
+    id: 18,
+    bestSeller: "+14",
+    brand: "Seiko",
+    productName: "Prospex SRPD21",
+    rating: "✩✩✩✩☆  24,432",
+    reviews: "Review 876",
+    mrp: "18999 ",
+    titel: "M.R.P",
+    price: "16999",
+    discount: "(10% off)",
+    prime: "✓ Prime",
+    delivery: "FREE Delivery by Amazon",
+    image: "./src/assets/watch/wa18.jpg",
+    quantity: 1,
+  },
+  {
+    id: 19,
+    bestSeller: "+11",
+    brand: "Hamilton",
+    productName: "Jazzmaster Open Heart",
+    rating: "✩✩✩✩☆  17,876",
+    reviews: "Review 654",
+    mrp: "22999 ",
+    titel: "M.R.P",
+    price: "20999",
+    discount: "(9% off)",
+    prime: "✓ Prime",
+    delivery: "FREE Delivery by Amazon",
+    image: "./src/assets/watch/wa19.jpg",
+    quantity: 1,
+  },
+  {
+    id: 20,
+    bestSeller: "+8",
+    brand: "Timex",
+    productName: "Ironman Classic 30",
+    rating: "✩✩✩✩☆  14,567",
+    reviews: "Review 432",
+    mrp: "3999 ",
+    titel: "M.R.P",
+    price: "3499",
+    discount: "(12% off)",
+    prime: "✓ Prime",
+    delivery: "FREE Delivery by Amazon",
+    image: "./src/assets/watch/wa20.jpg",
+    quantity: 1,
+  },
+  {
+    id: 21,
+    bestSeller: "+10",
+    brand: "Movado",
+    productName: "Museum Classic",
+    rating: "✩✩✩✩☆  15,876",
+    reviews: "Review 543",
+    mrp: "24999 ",
+    titel: "M.R.P",
+    price: "22999",
+    discount: "(8% off)",
+    prime: "✓ Prime",
+    delivery: "FREE Delivery by Amazon",
+    image: "./src/assets/watch/wa21.jpg",
+    quantity: 1,
+  },
+  {
+    id: 22,
+    bestSeller: "+13",
+    brand: "Panerai",
+    productName: "Radiomir Black Seal",
+    rating: "✩✩✩✩☆  22,345",
+    reviews: "Review 876",
+    mrp: "42999 ",
+    titel: "M.R.P",
+    price: "38999",
+    discount: "(9% off)",
+    prime: "✓ Prime",
+    delivery: "FREE Delivery by Amazon",
+    image: "./src/assets/watch/wa22.jpg",
+    quantity: 1,
+  },
+  {
+    id: 23,
+    bestSeller: "+14",
+    brand: "Tag Heuer",
+    productName: "Monaco Calibre 11",
+    rating: "✩✩✩✩☆  28,765",
+    reviews: "Review 987",
+    mrp: "49999 ",
+    titel: "M.R.P",
+    price: "45999",
+    discount: "(8% off)",
+    prime: "✓ Prime",
+    delivery: "FREE Delivery by Amazon",
+    image: "./src/assets/watch/wa23.jpg",
+    quantity: 1,
+  },
+  {
+    id: 24,
+    bestSeller: "+11",
+    brand: "Rado",
+    productName: "HyperChrome Automatic",
+    rating: "✩✩✩✩☆  19,543",
+    reviews: "Review 876",
+    mrp: "39999 ",
+    titel: "M.R.P",
+    price: "35999",
+    discount: "(10% off)",
+    prime: "✓ Prime",
+    delivery: "FREE Delivery by Amazon",
+    image: "./src/assets/watch/wa24.jpg",
+    quantity: 1,
+  },
+  {
+    id: 25,
+    bestSeller: "+16",
+    brand: "Citizen",
+    productName: "Axiom Eco-Drive",
+    rating: "✩✩✩✩☆  14,876",
+    reviews: "Review 432",
+    mrp: "24999 ",
+    titel: "M.R.P",
+    price: "22999",
+    discount: "(8% off)",
+    prime: "✓ Prime",
+    delivery: "FREE Delivery by Amazon",
+    image: "./src/assets/watch/wa25.jpg",
+    quantity: 1,
+  },
+  {
+    id: 26,
+    bestSeller: "+15",
+    brand: "Fossil",
+    productName: "Neutra Chronograph",
+    rating: "✩✩✩✩✩  32,567",
+    reviews: "Review 765",
+    mrp: "15999 ",
+    titel: "M.R.P",
+    price: "13999",
+    discount: "(13% off)",
+    prime: "✓ Prime",
+    delivery: "FREE Delivery by Amazon",
+    image: "./src/assets/watch/wa26.jpg",
+    quantity: 1,
+  },
+  {
+    id: 27,
+    bestSeller: "+12",
+    brand: "Seiko",
+    productName: "Presage Automatic",
+    rating: "✩✩✩✩☆  21,876",
+    reviews: "Review 654",
+    mrp: "22999 ",
+    titel: "M.R.P",
+    price: "20999",
+    discount: "(9% off)",
+    prime: "✓ Prime",
+    delivery: "FREE Delivery by Amazon",
+    image: "./src/assets/watch/wa27.jpg",
+    quantity: 1,
+  },
+  {
+    id: 28,
+    bestSeller: "+8",
+    brand: "Omega",
+    productName: "Speedmaster Professional",
+    rating: "✩✩✩✩☆  14,567",
+    reviews: "Review 432",
+    mrp: "34999 ",
+    titel: "M.R.P",
+    price: "31999",
+    discount: "(8% off)",
+    prime: "✓ Prime",
+    delivery: "FREE Delivery by Amazon",
+    image: "./src/assets/watch/wa28.jpg",
+    quantity: 1,
+  },
+  {
+    id: 29,
+    bestSeller: "+10",
+    brand: "Breitling",
+    productName: "Navitimer 8 Chronograph",
+    rating: "✩✩✩✩☆  18,876",
+    reviews: "Review 543",
+    mrp: "49999 ",
+    titel: "M.R.P",
+    price: "45999",
+    discount: "(8% off)",
+    prime: "✓ Prime",
+    delivery: "FREE Delivery by Amazon",
+    image: "./src/assets/watch/wa29.jpg",
+    quantity: 1,
+  },
+  {
+    id: 30,
+    bestSeller: "+9",
+    brand: "Citizen",
+    productName: "Eco-Drive Satellite Wave GPS",
+    rating: "✩✩✩✩☆  17,567",
+    reviews: "Review 432",
+    mrp: "69999 ",
+    titel: "M.R.P",
+    price: "65999",
+    discount: "(6% off)",
+    prime: "✓ Prime",
+    delivery: "FREE Delivery by Amazon",
+    image: "./src/assets/watch/wa30.jpg",
+    quantity: 1,
+  },
+];
+
+const Watches = ({ setCartSize, cart, setCart }) => {
+  const addToCart = (product) => {
+    // Check if the product is already in the cart
+    const existingProduct = cart.find((item) => item.id === product.id);
+
+    if (existingProduct) {
+      // If the product is already in the cart, update the quantity
+      setCart(
+        cart.map((item) =>
+          item.id === product.id
+            ? { ...item, quantity: item.quantity + 1 }
+            : item
+        )
+      );
+    } else {
+      // If the product is not in the cart, add it with quantity 1
+      setCart([...cart, { ...product, quantity: 1 }]);
+    }
+
+    // Calculate the total number of items in the cart
+    const totalItems = cart.reduce((acc, item) => acc + item.quantity, 0);
+    setCartSize(totalItems);
+  };
+
+  return (
+    <div className="formal-dress-product">
+      <h2>Watch Collections</h2>
+      <div className="formal-dress-container-1">
+        {products.map((product) => (
+          <div key={product.id} className="product">
+            <div className="product-image">
+              <img src={product.image} alt={product.productName} />
+            </div>
+            <div className="product-details">
+              <p className="best-seller">Best Seller {product.bestSeller}</p>
+              <div className="formal-card">
+                <p className="brand">{product.brand}</p>
+                <p className="product-name">{product.productName}</p>
+                <div className="formal-review">
+                  <p className="rating">{product.rating}</p>
+                  <p className="reviews">{product.reviews}</p>
+                </div>
+                <div className="price-content">
+                  <p className="mrp">₹{product.mrp}</p>
+                  <p className="title">{product.titel}</p>
+                  <p className="price">₹{product.price}</p>
+                  <p className="discount">{product.discount}</p>
+                </div>
+                <p className="prime">{product.prime}</p>
+                <p className="delivery">{product.delivery}</p>
+              </div>
+
+              <div className="buttons-formal-but">
+                <button
+                  onClick={() => addToCart(product)}
+                  className="add-to-cart"
+                >
+                  Add to Cart
+                </button>
+                &nbsp;
+                <button
+                  onClick={() => addToCart(product)}
+                  className="add-to-cart"
+                >
+                  Buy Now
+                </button>
+              </div>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+};
+
+export default Watches;

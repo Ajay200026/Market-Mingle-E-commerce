@@ -1,0 +1,235 @@
+/* Desktop breakpoint */
+.first-nav {
+  width: 95%;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 0;
+}
+.first-nav img {
+  width: 20%;
+  height: 10%;
+}
+
+.login-menu a {
+  text-decoration: none;
+  color: white;
+}
+.login-menu button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100px;
+  height: 25px;
+  border-radius: 25px;
+  border: none;
+  background-color: hsl(217, 100%, 57%);
+}
+.profile-nav-bar {
+  font-size: 14px;
+  border-radius: 50%;
+  width: 70px;
+  border: none;
+}
+.profile-menu p {
+  text-align: center;
+}
+.profile-menu img {
+  margin-top: 7px;
+  width: 50px;
+  height: auto;
+  text-align: center;
+}
+.nav-list-menu {
+  display: flex;
+  background: rgb(238, 174, 202);
+  background: radial-gradient(
+    circle,
+    rgba(238, 174, 202, 1) 0%,
+    rgba(148, 187, 233, 1) 100%
+  );
+  height: 40px;
+}
+.nav-list-menu ul {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  list-style: none;
+  width: 95%;
+}
+.nav-list-menu img {
+  display: none;
+}
+.nav-list-menu a {
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+  font-size: 1.3rem;
+}
+.cart a,
+.chart a {
+  display: flex;
+  font-size: 1.5rem;
+  align-items: center;
+  column-gap: 5px;
+  text-decoration: none;
+  color: black;
+}
+.chart h3,
+.cart h3 {
+  font-size: 1rem;
+}
+.ecommerce-nav {
+  margin-top: 0;
+}
+.mobile-view {
+  display: none;
+}
+.nav-list-menu {
+  display: block;
+}
+.nav-list-menu {
+  display: flex;
+  align-items: center;
+}
+/* iPad breakpoint */
+@media only screen and (max-width: 1024px) {
+  .first-nav {
+    width: 100%;
+  }
+  .cart a {
+    column-gap: 0.5rem;
+    display: flex;
+    flex-direction: row;
+    font-size: 0.875em;
+  }
+  .chart a {
+    display: none;
+  }
+  .search-bar {
+    width: 380px;
+    height: 2vh;
+  }
+  .login-menu button {
+    width: 80px;
+  }
+  .search-bar input {
+    width: 200px;
+    border-radius: 10px;
+    height: 1vh;
+  }
+  .first-nav img {
+    width: 23%;
+    height: 15%;
+  }
+  .nav-card {
+    display: flex;
+    justify-content: space-between;
+    column-gap: 2rem;
+    flex-wrap: wrap;
+    row-gap: 1rem;
+    align-items: center;
+  }
+  .nav-list-menu {
+    display: flex;
+    justify-content: center;
+    padding: 1rem 1rem;
+    margin-bottom: 0.5rem;
+    height: 6vh;
+    margin-left: -1.5rem;
+  }
+
+  /* iPhone breakpoint */
+  @media only screen and (max-width: 768px) {
+    .first-nav {
+      width: 100%;
+      margin-top: -1rem;
+    }
+
+    .search-bar {
+      width: 290px;
+      height: 15px;
+    }
+    .search-bar input {
+      width: 180px;
+      height: 5px;
+    }
+    .first-nav img {
+      display: none;
+      /*  width: 10%;
+      height: auto;
+      */
+    }
+    .cart a,
+    .chart a {
+      display: none;
+    }
+    .login-menu button {
+      width: 50px;
+    }
+    .nav-list-menu ul {
+      display: none;
+    }
+    .nav-list-menu {
+      width: 105%;
+    }
+
+    .mobile-view {
+      width: 100%;
+      bottom: 0;
+      left: 0;
+      position: absolute;
+      display: flex;
+      background: rgb(238, 174, 202);
+      background: radial-gradient(
+        circle,
+        rgba(238, 174, 202, 1) 0%,
+        rgba(148, 187, 233, 1) 100%
+      );
+      justify-content: center;
+      align-items: center;
+      column-gap: 3.5rem;
+      padding-bottom: 1.5rem;
+      padding-top: 1.5rem;
+      position: fixed;
+    }
+    .mobile-view .fa-solid {
+      font-size: 1.5rem;
+    }
+    .nav-list-menu img {
+      display: flex;
+      width: 200px;
+      height: 60px;
+      margin-left: 0rem;
+    }
+    .nav-list-menu {
+      margin-top: -1rem;
+      height: 2vh;
+    }
+    .cart .fa-solid {
+      display: block;
+    }
+    .nav-list-menu ul {
+      position: fixed;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      background-color: #faaca8;
+      background-image: linear-gradient(19deg, #faaca8 0%, #ddd6f3 100%);
+      z-index: -1;
+      padding: 10px 10px;
+      width: 362px;
+      height: 60vh;
+      margin-left: -1rem;
+      left: 20px;
+      top: 0px;
+      margin-top: 14rem;
+      z-index: 1;
+      position: fixed;
+    }
+    .profile-nav-bar {
+      display: block;
+    }
+  }
+}

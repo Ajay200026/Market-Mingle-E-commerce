@@ -1,0 +1,131 @@
+.products-card-main-h {
+  display: flex;
+
+  padding: 20px;
+}
+.products-card-main-h img {
+  width: 220px;
+  height: 160px;
+  object-fit: contain;
+  border-radius: 5px;
+}
+
+.product-card {
+  border: 1px solid #ccc;
+  background-color: #fff;
+  padding: 20px;
+  text-align: center;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease;
+
+  &:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+}
+
+.sponsored-label {
+  background: #ffe000; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to right,
+    #799f0c,
+    #ffe000
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to right,
+    #799f0c,
+    #ffe000
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+  padding: 5px;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+.product-details {
+  color: #000000;
+  margin-top: 10px;
+}
+.product-name {
+  font-size: 15pt;
+  margin-bottom: 10px;
+}
+
+.fit-description {
+  font-size: 1rem;
+  color: #000000;
+  margin-bottom: 10px;
+}
+
+.price-section {
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+.original-price {
+  font-size: 1.2rem;
+  color: #212529;
+  margin-right: 10px;
+}
+
+.discount {
+  font-size: 1rem;
+  color: #dc3545;
+  margin-right: 5px;
+}
+
+.discounted-price {
+  font-size: 1.2rem;
+  color: #dc3545;
+}
+
+.free-delivery-tag {
+  font-size: 1rem;
+  color: #28a745;
+  font-weight: bold;
+}
+
+@media only screen and (max-width: 768px) {
+  .product-card {
+    height: 25vh;
+  }
+
+  .products-card-main-h img {
+    width: 100px;
+    height: 80px;
+    object-fit: contain;
+    border-radius: 5px;
+  }
+  .sponsored-label {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 1vh;
+    font-size: 6pt;
+  }
+  .product-name {
+    font-size: 8pt;
+  }
+  .original-price {
+    font-size: 8pt;
+  }
+  .discount {
+    font-size: 8pt;
+    color: #dc3545;
+    margin-right: 5px;
+  }
+
+  .discounted-price {
+    font-size: 8pt;
+    color: #dc3545;
+  }
+
+  .free-delivery-tag {
+    font-size: 8pt;
+    color: black;
+    font-weight: bold;
+    margin-top: -8rem;
+  }
+}

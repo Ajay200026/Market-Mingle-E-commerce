@@ -1,0 +1,561 @@
+import React from "react";
+
+const products = [
+  {
+    id: 1,
+    bestSeller: "+10",
+    brand: "John Deere",
+    productName: "Tractor - Model 5050D",
+    rating: "✩✩✩✩✩  25,000",
+    reviews: "Review 432",
+    mrp: "899999 ",
+    titel: "M.R.P",
+    price: "799999",
+    discount: "(11% off)",
+    prime: "✓ Prime",
+    delivery: "FREE Delivery by Amazon",
+    image: "./src/assets/agriculture/ag1.jpg",
+    quantity: 1,
+  },
+  {
+    id: 2,
+    bestSeller: "+8",
+    brand: "Monsanto",
+    productName: "Genetically Modified Seeds",
+    rating: "✩✩✩✩☆  15,345",
+    reviews: "Review 256",
+    mrp: "2999 ",
+    titel: "M.R.P",
+    price: "2499",
+    discount: "(17% off)",
+    prime: "✓ Prime",
+    delivery: "FREE Delivery by Amazon",
+    image: "./src/assets/agriculture/ag2.jpg",
+    quantity: 1,
+  },
+  {
+    id: 3,
+    bestSeller: "+15",
+    brand: "Irritrol",
+    productName: "Smart Irrigation System",
+    rating: "✩✩✩✩✩  18,765",
+    reviews: "Review 654",
+    mrp: "5999 ",
+    titel: "M.R.P",
+    price: "4999",
+    discount: "(17% off)",
+    prime: "✓ Prime",
+    delivery: "FREE Delivery by Amazon",
+    image: "./src/assets/agriculture/ag3.jpg",
+    quantity: 1,
+  },
+  {
+    id: 4,
+    bestSeller: "+12",
+    brand: "Kubota",
+    productName: "Harvester - Model B2440",
+    rating: "✩✩✩✩☆  21,543",
+    reviews: "Review 789",
+    mrp: "459999 ",
+    titel: "M.R.P",
+    price: "399999",
+    discount: "(13% off)",
+    prime: "✓ Prime",
+    delivery: "FREE Delivery by Amazon",
+    image: "./src/assets/agriculture/ag4.jpg",
+    quantity: 1,
+  },
+  {
+    id: 5,
+    bestSeller: "+9",
+    brand: "Bayer",
+    productName: "Crop Protection Chemicals",
+    rating: "✩✩✩✩☆  13,678",
+    reviews: "Review 432",
+    mrp: "799 ",
+    titel: "M.R.P",
+    price: "599",
+    discount: "(25% off)",
+    prime: "✓ Prime",
+    delivery: "FREE Delivery by Amazon",
+    image: "./src/assets/agriculture/ag5.jpg",
+    quantity: 1,
+  },
+  {
+    id: 6,
+    bestSeller: "+7",
+    brand: "Husqvarna",
+    productName: "Chainsaw - Model 450",
+    rating: "✩✩✩✩☆  9,876",
+    reviews: "Review 432",
+    mrp: "19999 ",
+    titel: "M.R.P",
+    price: "17999",
+    discount: "(10% off)",
+    prime: "✓ Prime",
+    delivery: "FREE Delivery by Amazon",
+    image: "./src/assets/agriculture/ag6.jpg",
+    quantity: 1,
+  },
+  {
+    id: 7,
+    bestSeller: "+11",
+    brand: "Yara International",
+    productName: "Fertilizer - Nitrogen 20-20-20",
+    rating: "✩✩✩✩✩  32,567",
+    reviews: "Review 987",
+    mrp: "899 ",
+    titel: "M.R.P",
+    price: "799",
+    discount: "(11% off)",
+    prime: "✓ Prime",
+    delivery: "FREE Delivery by Amazon",
+    image: "./src/assets/agriculture/ag7.jpg",
+    quantity: 1,
+  },
+  {
+    id: 8,
+    bestSeller: "+14",
+    brand: "DeWalt",
+    productName: "Cordless Pruner",
+    rating: "✩✩✩✩☆  15,432",
+    reviews: "Review 876",
+    mrp: "2999 ",
+    titel: "M.R.P",
+    price: "2499",
+    discount: "(17% off)",
+    prime: "✓ Prime",
+    delivery: "FREE Delivery by Amazon",
+    image: "./src/assets/agriculture/ag8.jpg",
+    quantity: 1,
+  },
+  {
+    id: 9,
+    bestSeller: "+7",
+    brand: "DripWorks",
+    productName: "Drip Irrigation Kit",
+    rating: "✩✩✩✩☆  8,765",
+    reviews: "Review 321",
+    mrp: "1499 ",
+    titel: "M.R.P",
+    price: "1199",
+    discount: "(20% off)",
+    prime: "✓ Prime",
+    delivery: "FREE Delivery by Amazon",
+    image: "./src/assets/agriculture/ag9.jpg",
+    quantity: 1,
+  },
+  {
+    id: 10,
+    bestSeller: "+10",
+    brand: "Ryobi",
+    productName: "Gasoline Cultivator",
+    rating: "✩✩✩✩☆  11,234",
+    reviews: "Review 432",
+    mrp: "19999 ",
+    titel: "M.R.P",
+    price: "17999",
+    discount: "(10% off)",
+    prime: "✓ Prime",
+    delivery: "FREE Delivery by Amazon",
+    image: "./src/assets/agriculture/ag10.jpg",
+    quantity: 1,
+  },
+  {
+    id: 11,
+    bestSeller: "+18",
+    brand: "Case IH",
+    productName: "Combine Harvester - Model 7250",
+    rating: "✩✩✩✩☆  19,876",
+    reviews: "Review 567",
+    mrp: "1249999 ",
+    titel: "M.R.P",
+    price: "1099999",
+    discount: "(12% off)",
+    prime: "✓ Prime",
+    delivery: "FREE Delivery by Amazon",
+    image: "./src/assets/agriculture/ag11.jpg",
+    quantity: 1,
+  },
+  {
+    id: 12,
+    bestSeller: "+13",
+    brand: "Syngenta",
+    productName: "Herbicides - Glyphosate 41%",
+    rating: "✩✩✩✩✩  42,345",
+    reviews: "Review 876",
+    mrp: "3999 ",
+    titel: "M.R.P",
+    price: "3499",
+    discount: "(13% off)",
+    prime: "✓ Prime",
+    delivery: "FREE Delivery by Amazon",
+    image: "./src/assets/agriculture/ag12.jpg",
+    quantity: 1,
+  },
+  {
+    id: 13,
+    bestSeller: "+10",
+    brand: "Valmont",
+    productName: "Pivot Irrigation System",
+    rating: "✩✩✩✩☆  13,765",
+    reviews: "Review 345",
+    mrp: "24999 ",
+    titel: "M.R.P",
+    price: "21999",
+    discount: "(12% off)",
+    prime: "✓ Prime",
+    delivery: "FREE Delivery by Amazon",
+    image: "./src/assets/agriculture/ag13.jpg",
+    quantity: 1,
+  },
+  {
+    id: 14,
+    bestSeller: "+16",
+    brand: "Dow AgroSciences",
+    productName: "Insecticides - Malathion 50%",
+    rating: "✩✩✩✩☆  24,543",
+    reviews: "Review 789",
+    mrp: "1999 ",
+    titel: "M.R.P",
+    price: "1499",
+    discount: "(25% off)",
+    prime: "✓ Prime",
+    delivery: "FREE Delivery by Amazon",
+    image: "./src/assets/agriculture/ag14.jpg",
+    quantity: 1,
+  },
+  {
+    id: 15,
+    bestSeller: "+11",
+    brand: "Toro",
+    productName: "Zero Turn Lawn Mower",
+    rating: "✩✩✩✩✩  32,567",
+    reviews: "Review 987",
+    mrp: "79999 ",
+    titel: "M.R.P",
+    price: "69999",
+    discount: "(13% off)",
+    prime: "✓ Prime",
+    delivery: "FREE Delivery by Amazon",
+    image: "./src/assets/agriculture/ag15.jpg",
+    quantity: 1,
+  },
+  {
+    id: 16,
+    bestSeller: "+14",
+    brand: "Corteva Agriscience",
+    productName: "Seed Treatment Chemicals",
+    rating: "✩✩✩✩☆  15,432",
+    reviews: "Review 876",
+    mrp: "2999 ",
+    titel: "M.R.P",
+    price: "2499",
+    discount: "(17% off)",
+    prime: "✓ Prime",
+    delivery: "FREE Delivery by Amazon",
+    image: "./src/assets/agriculture/ag16.jpg",
+    quantity: 1,
+  },
+  {
+    id: 17,
+    bestSeller: "+9",
+    brand: "AGCO",
+    productName: "Precision Planting System",
+    rating: "✩✩✩✩☆  19,876",
+    reviews: "Review 543",
+    mrp: "59999 ",
+    titel: "M.R.P",
+    price: "49999",
+    discount: "(17% off)",
+    prime: "✓ Prime",
+    delivery: "FREE Delivery by Amazon",
+    image: "./src/assets/agriculture/ag17.jpg",
+    quantity: 1,
+  },
+  {
+    id: 18,
+    bestSeller: "+15",
+    brand: "FMC Corporation",
+    productName: "Fungicides - Mancozeb 80%",
+    rating: "✩✩✩✩✩  15,432",
+    reviews: "Review 876",
+    mrp: "1999 ",
+    titel: "M.R.P",
+    price: "1499",
+    discount: "(25% off)",
+    prime: "✓ Prime",
+    delivery: "FREE Delivery by Amazon",
+    image: "./src/assets/agriculture/ag18.jpg",
+    quantity: 1,
+  },
+  {
+    id: 19,
+    bestSeller: "+12",
+    brand: "Kverneland Group",
+    productName: "Plough - 3 Bottom Reversible",
+    rating: "✩✩✩✩☆  8,765",
+    reviews: "Review 321",
+    mrp: "89999 ",
+    titel: "M.R.P",
+    price: "79999",
+    discount: "(11% off)",
+    prime: "✓ Prime",
+    delivery: "FREE Delivery by Amazon",
+    image: "./src/assets/agriculture/ag19.jpg",
+    quantity: 1,
+  },
+  {
+    id: 20,
+    bestSeller: "+7",
+    brand: "Cibus",
+    productName: "Gene-Edited Seeds",
+    rating: "✩✩✩✩☆  11,234",
+    reviews: "Review 432",
+    mrp: "1599 ",
+    titel: "M.R.P",
+    price: "1399",
+    discount: "(12% off)",
+    prime: "✓ Prime",
+    delivery: "FREE Delivery by Amazon",
+    image: "./src/assets/agriculture/ag20.jpg",
+    quantity: 1,
+  },
+  {
+    id: 21,
+    bestSeller: "+9",
+    brand: "CLAAS",
+    productName: "Forage Harvester - Jaguar 980",
+    rating: "✩✩✩✩☆  14,876",
+    reviews: "Review 567",
+    mrp: "1549999 ",
+    titel: "M.R.P",
+    price: "1399999",
+    discount: "(10% off)",
+    prime: "✓ Prime",
+    delivery: "FREE Delivery by Amazon",
+    image: "./src/assets/agriculture/ag21.jpg",
+    quantity: 1,
+  },
+  {
+    id: 22,
+    bestSeller: "+11",
+    brand: "BASF",
+    productName: "Herbicides - Atrazine 50%",
+    rating: "✩✩✩✩✩  27,345",
+    reviews: "Review 876",
+    mrp: "2999 ",
+    titel: "M.R.P",
+    price: "2499",
+    discount: "(17% off)",
+    prime: "✓ Prime",
+    delivery: "FREE Delivery by Amazon",
+    image: "./src/assets/agriculture/ag22.jpg",
+    quantity: 1,
+  },
+  {
+    id: 23,
+    bestSeller: "+14",
+    brand: "Rain Bird",
+    productName: "Smart Sprinkler Controller",
+    rating: "✩✩✩✩☆  21,765",
+    reviews: "Review 654",
+    mrp: "7999 ",
+    titel: "M.R.P",
+    price: "6999",
+    discount: "(13% off)",
+    prime: "✓ Prime",
+    delivery: "FREE Delivery by Amazon",
+    image: "./src/assets/agriculture/ag23.jpg",
+    quantity: 1,
+  },
+  {
+    id: 24,
+    bestSeller: "+16",
+    brand: "Bayer CropScience",
+    productName: "Nematicides - Abamectin 1.8%",
+    rating: "✩✩✩✩☆  18,543",
+    reviews: "Review 789",
+    mrp: "1999 ",
+    titel: "M.R.P",
+    price: "1499",
+    discount: "(25% off)",
+    prime: "✓ Prime",
+    delivery: "FREE Delivery by Amazon",
+    image: "./src/assets/agriculture/ag24.jpg",
+    quantity: 1,
+  },
+  {
+    id: 25,
+    bestSeller: "+12",
+    brand: "Hustler Turf",
+    productName: "Zero Turn Riding Mower",
+    rating: "✩✩✩✩☆  14,678",
+    reviews: "Review 432",
+    mrp: "89999 ",
+    titel: "M.R.P",
+    price: "79999",
+    discount: "(11% off)",
+    prime: "✓ Prime",
+    delivery: "FREE Delivery by Amazon",
+    image: "./src/assets/agriculture/ag25.jpg",
+    quantity: 1,
+  },
+  {
+    id: 26,
+    bestSeller: "+8",
+    brand: "Dyna-Gro",
+    productName: "Liquid Plant Food - Foliage-Pro",
+    rating: "✩✩✩✩☆  11,876",
+    reviews: "Review 432",
+    mrp: "1999 ",
+    titel: "M.R.P",
+    price: "1499",
+    discount: "(25% off)",
+    prime: "✓ Prime",
+    delivery: "FREE Delivery by Amazon",
+    image: "./src/assets/agriculture/ag26.jpg",
+    quantity: 1,
+  },
+  {
+    id: 27,
+    bestSeller: "+15",
+    brand: "Amazone",
+    productName: "Seed Drill - Primera DMC",
+    rating: "✩✩✩✩✩  23,567",
+    reviews: "Review 987",
+    mrp: "499999 ",
+    titel: "M.R.P",
+    price: "449999",
+    discount: "(10% off)",
+    prime: "✓ Prime",
+    delivery: "FREE Delivery by Amazon",
+    image: "./src/assets/agriculture/ag27.jpg",
+    quantity: 1,
+  },
+  {
+    id: 28,
+    bestSeller: "+10",
+    brand: "DuPont",
+    productName: "Fungicides - Copper Hydroxide 77%",
+    rating: "✩✩✩✩☆  15,432",
+    reviews: "Review 876",
+    mrp: "2499 ",
+    titel: "M.R.P",
+    price: "1999",
+    discount: "(20% off)",
+    prime: "✓ Prime",
+    delivery: "FREE Delivery by Amazon",
+    image: "./src/assets/agriculture/ag28.jpg",
+    quantity: 1,
+  },
+  {
+    id: 29,
+    bestSeller: "+14",
+    brand: "Rain Bird",
+    productName: "Smart Sprinkler Controller",
+    rating: "✩✩✩✩☆  21,765",
+    reviews: "Review 654",
+    mrp: "7999 ",
+    titel: "M.R.P",
+    price: "6999",
+    discount: "(13% off)",
+    prime: "✓ Prime",
+    delivery: "FREE Delivery by Amazon",
+    image: "./src/assets/agriculture/ag29.jpg",
+    quantity: 1,
+  },
+  {
+    id: 30,
+    bestSeller: "+16",
+    brand: "Bayer CropScience",
+    productName: "Nematicides - Abamectin 1.8%",
+    rating: "✩✩✩✩☆  18,543",
+    reviews: "Review 789",
+    mrp: "1999 ",
+    titel: "M.R.P",
+    price: "1499",
+    discount: "(25% off)",
+    prime: "✓ Prime",
+    delivery: "FREE Delivery by Amazon",
+    image: "./src/assets/agriculture/ag30.jpg",
+    quantity: 1,
+  },
+];
+
+const AgroHarbor = ({ setCartSize, cart, setCart }) => {
+  const addToCart = (product) => {
+    // Check if the product is already in the cart
+    const existingProduct = cart.find((item) => item.id === product.id);
+
+    if (existingProduct) {
+      // If the product is already in the cart, update the quantity
+      setCart(
+        cart.map((item) =>
+          item.id === product.id
+            ? { ...item, quantity: item.quantity + 1 }
+            : item
+        )
+      );
+    } else {
+      // If the product is not in the cart, add it with quantity 1
+      setCart([...cart, { ...product, quantity: 1 }]);
+    }
+
+    // Calculate the total number of items in the cart
+    const totalItems = cart.reduce((acc, item) => acc + item.quantity, 0);
+    setCartSize(totalItems);
+  };
+
+  return (
+    <div className="formal-dress-product">
+      <h2>Agriculture Products</h2>
+      <div className="formal-dress-container-1">
+        {products.map((product) => (
+          <div key={product.id} className="product">
+            <div className="product-image">
+              <img src={product.image} alt={product.productName} />
+            </div>
+            <div className="product-details">
+              <p className="best-seller">Best Seller {product.bestSeller}</p>
+              <div className="formal-card">
+                <p className="brand">{product.brand}</p>
+                <p className="product-name">{product.productName}</p>
+                <div className="formal-review">
+                  <p className="rating">{product.rating}</p>
+                  <p className="reviews">{product.reviews}</p>
+                </div>
+                <div className="price-content">
+                  <p className="mrp">₹{product.mrp}</p>
+                  <p className="title">{product.titel}</p>
+                  <p className="price">₹{product.price}</p>
+                  <p className="discount">{product.discount}</p>
+                </div>
+                <p className="prime">{product.prime}</p>
+                <p className="delivery">{product.delivery}</p>
+              </div>
+
+              <div className="buttons-formal-but">
+                <button
+                  onClick={() => addToCart(product)}
+                  className="add-to-cart"
+                >
+                  Add to Cart
+                </button>
+                &nbsp;
+                <button
+                  onClick={() => addToCart(product)}
+                  className="add-to-cart"
+                >
+                  Buy Now
+                </button>
+              </div>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+};
+
+export default AgroHarbor;

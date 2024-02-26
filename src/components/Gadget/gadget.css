@@ -1,0 +1,12 @@
+.slider-auto-3 img {
+  height: 50vh;
+}
+.slider-auto-3 {
+  display: flex;
+  justify-content: center;
+}
+@media only screen and (max-device-width: 1024px) {
+  .slider-auto-3 img {
+    height: 420px;
+  }
+}

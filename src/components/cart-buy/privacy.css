@@ -1,0 +1,43 @@
+.privacy-footer .container {
+  display: flex;
+  width: 100%;
+  background-color: black;
+  color: #fff;
+}
+a {
+  text-decoration: none;
+  color: #000;
+}
+
+.pricacy-foot {
+  display: flex;
+  flex-direction: column;
+  padding: 2rem 2rem;
+  align-items: center;
+  text-align: center;
+  text-align: justify;
+}
+.pricacy-foot h4,
+p {
+  font-size: 12pt;
+}
+
+.privacy-footer marquee {
+  height: 4vh;
+}
+.privacy-footer h2 {
+  font-size: 12pt;
+  font-family: monospace;
+}
+@media only screen and (max-width: 1024px) {
+  .privacy-footer .container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-content: center;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .privacy-footer .container {
+    display: none;
+  }
+}
